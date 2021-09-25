@@ -27,7 +27,18 @@ function App(){
     },[someData])
 
     return (
-        <> 
+          <> 
+          <p>Image Upload</p>
+      <form method="post" action="api/pers" encType="multipart/form-data">
+        <input type="text" name="nickname" defaultValue="Superman!" /><br/>
+        <input type="text" name="realname" defaultValue="Clark Kent"/><br/>
+        <input type="text" name="descrip"  defaultValue="he was born Kal-El on the planet Krypton..."/><br/>
+        <input type="text" name="power" defaultValue="solar energy absorption and healing factor"/><br/>
+        <input type="text" name="phrase" defaultValue="Look up in the sky, it's a bird, it's a plane, it's Superman!" /><br/>
+        <input type="file" name="image"/><br/>
+        <button type="submit" name="upload">Upload</button>
+      </form>
+
             {loadingStatus ? <Loader
                 type="ThreeDots"
                 color="#00BFFF"
